@@ -12,7 +12,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gitProjectB15" target="17" />
-      <module name="Group27-B15" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

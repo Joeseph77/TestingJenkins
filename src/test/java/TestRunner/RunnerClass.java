@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/Features",
-        glue = "Steps",
-        dryRun = true,
-        tags = "datatable"
+        glue = "StepDefinitions",
+        dryRun = false,
+        tags = "@datatable"
 )
 public class RunnerClass {
 }

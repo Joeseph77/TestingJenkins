@@ -1,6 +1,6 @@
 package Utils;
 
-import StepDefinitions.PageInitializer;
+import StepDefinitions.PageInitializers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import java.time.Duration;
 
-    public class CommonMethods extends PageInitializer {
+    public class CommonMethods extends PageInitializers {
         public static WebDriver driver;
         public static void openBrowserAndLaunchApplication() {
             ConfigReader.readProperties();
@@ -36,7 +36,7 @@ import java.time.Duration;
             driver.manage().window().maximize();
             driver.get(ConfigReader.getPropertyValue("url"));
             driver.manage().timeouts().implicitlyWait(Duration.ofMillis(Constants.WAIT_TIME));
-            //initializePageObjects();
+            initializePageObjects();
 
         }
         public static void sendText(WebElement element, String text) {

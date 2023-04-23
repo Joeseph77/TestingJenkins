@@ -7,11 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gitProjectB15" />
-        <module name="Group27-B15" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="gitProjectB15" target="17" />
+      <module name="Group27-B15" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

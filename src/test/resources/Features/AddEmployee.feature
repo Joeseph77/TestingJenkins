@@ -1,6 +1,6 @@
 Feature: Adding a new Employee
 
-  @Addemp1
+  @smoke2
   Scenario: Adding a new Employee without Id, Id is generated automatically
     When user enters a valid email and password
     And clicks on Login Button
@@ -11,7 +11,7 @@ Feature: Adding a new Employee
     Then  new employee data is added
 
 
-  @Addemp1
+  @smoke2
   Scenario: Adding a new Employee, only firstName without lastname
     When user enters a valid email and password
     And clicks on Login Button
@@ -21,8 +21,8 @@ Feature: Adding a new Employee
    And user clicks on save button
     Then  Error message will appear required field
 
-  @Addemp1
-    Scenario: Adding a new Employee with a new ID from config file
+  @smoke2
+  Scenario: Adding a new Employee with a new ID from config file
       When user enters a valid email and password
       And clicks on Login Button
       When user clicks on PIM option
@@ -32,7 +32,7 @@ Feature: Adding a new Employee
       And user clicks on save button
     Then  new employee data is added
 
-  @Addemp1
+  @smoke2
   Scenario: Adding a new Employee with a duplicate ID
     When user enters a valid email and password
     And clicks on Login Button

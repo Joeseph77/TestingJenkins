@@ -43,6 +43,11 @@ public class AddEmployee extends CommonMethods {
         sendText(addEmp.empIDTextBox, string);
     }
 
+    @When("user enters firstname {string}")
+    public void user_enters_firstname(String string) {
+        sendText(addEmp.firstNameTextBox, string);
+    }
+
     @When("user clicks on save button")
     public void user_clicks_on_save_button() throws InterruptedException {
 
@@ -50,13 +55,27 @@ public class AddEmployee extends CommonMethods {
         Thread.sleep(3000);
     }
 
+    @Then("Error message will appear required field")
+    public void error_message_will_appear_required_field() {
+        Boolean valReqVisible = addEmp.validRequired.isDisplayed();
+        Assert.assertEquals(valReqVisible, true);
+    }
+
     @Then("new employee data is added")
     public void new_employee_data_is_added() {
         //     assertion that employee data is successfully added
-
         String actualText = personalDetailsPage.personalDetailsText.getText();
         String expText = "Personal Details";
-        Assert.assertEquals(expText, actualText);
+        Assert.assertEquals(actualText, expText);
+
+    }
+
+    @Then("new employee data is not added")
+    public void new_employee_data_is_not_added() {
+        //     assertion that employee data is not added
+        String expectedText = addEmp.addEmployeeText.getText();
+        String actualText = "Add Employee";
+        Assert.assertEquals(actualText, expectedText);
 
     }
 }

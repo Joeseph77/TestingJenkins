@@ -31,4 +31,10 @@ public class AddEmployeePage extends CommonMethods {
 
     @FindBy(id= "btnSave")
     public WebElement saveBtn;
+
+    @FindBy(xpath = "//span[contains(text(),'Required')]")
+    public WebElement validRequired;
+
+    @FindBy(xpath = "//h1[contains(text(),'Add Employee')]")
+    public WebElement addEmployeeText;
 }

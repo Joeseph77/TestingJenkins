@@ -1,5 +1,5 @@
 Feature: Login Functionality
-  @datatable
+  @datatable1
   Scenario: Valid Admin Login
     #Given the user navigates to the url
     When user enters a valid email and password

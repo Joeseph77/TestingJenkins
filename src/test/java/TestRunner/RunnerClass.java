@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-        tags = "@datatable"
+        tags = "@Addemp3"
 )
 public class RunnerClass {
 }

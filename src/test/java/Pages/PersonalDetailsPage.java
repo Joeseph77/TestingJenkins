@@ -14,5 +14,6 @@ public class PersonalDetailsPage extends CommonMethods {
     @FindBy(xpath = "//h1[contains(text(),'Personal Details')]")
     public WebElement personalDetailsText;
 
-
+    @FindBy(xpath = "//a[contains(text(),'Memberships')]")
+    public WebElement membershipsTab;
 }

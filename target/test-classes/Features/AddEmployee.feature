@@ -1,6 +1,6 @@
 Feature: Adding a new Employee
 
-  @smoke2
+  @smoke2jenkins
   Scenario: Adding a new Employee without Id, Id is generated automatically
     When user enters a valid email and password
     And clicks on Login Button

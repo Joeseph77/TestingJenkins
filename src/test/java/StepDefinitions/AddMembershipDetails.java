@@ -36,7 +36,9 @@ public class AddMembershipDetails extends CommonMethods {
     @Then("user selects MembershipType")
     public void user_selects_membership_type() throws InterruptedException {
         Select sel = new Select(addMembershipDetailsPage.membershipDropdown);
-        sel.selectByValue("991");
+       // List<WebElement> memberShipOptions = sel.getAllSelectedOptions();
+       // System.out.println(memberShipOptions.get(3).getText());
+        sel.selectByVisibleText(addMembershipDetailsPage.membershipOptions.get(2).getText());
         Thread.sleep(2000);
 
     }
@@ -91,7 +93,7 @@ public class AddMembershipDetails extends CommonMethods {
         sel.selectByVisibleText("Oct");
         sel = new Select(addMembershipDetailsPage.commenceYear);
         sel.selectByVisibleText("2024");
-        Thread.sleep(5000);
+
 
         boolean isFound = false;
         while (!isFound) {
@@ -104,12 +106,14 @@ public class AddMembershipDetails extends CommonMethods {
                 }
             }
         }
-        Thread.sleep(5000);
+
     }
 
     @Then("user clicks on membership save button")
-    public void user_clicks_on_membership_save_button() {
+    public void user_clicks_on_membership_save_button() throws InterruptedException {
         doClick(addMembershipDetailsPage.btnSaveMembership);
+
+        Thread.sleep(5000);
     }
 
     @When("selects to delete a certain Memberships")

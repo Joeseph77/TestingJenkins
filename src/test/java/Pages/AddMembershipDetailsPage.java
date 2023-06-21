@@ -18,6 +18,8 @@ public class AddMembershipDetailsPage extends CommonMethods {
     @FindBy(xpath = "//select[@name='membership[membership]']")
     public WebElement membershipDropdown;
 
+    @FindBy(xpath = "//select[@name='membership[membership]']/option")
+     public List<WebElement> membershipOptions;
     @FindBy(css = "select#membership_subscriptionPaidBy")
     public WebElement subscriptionPaidByDD;
 

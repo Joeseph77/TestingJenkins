@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gitProjectB15" />
+        <module name="Group27-B15_042623" />
+        <module name="Group27-B15_26" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
